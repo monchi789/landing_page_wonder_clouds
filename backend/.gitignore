@@ -1,0 +1,7 @@
+env
+.env
+__init__.py
+migrations
+__pycache__
+.editorconfig
+*.sqlite3
