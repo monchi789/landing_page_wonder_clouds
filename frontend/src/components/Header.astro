@@ -1,9 +1,12 @@
 ---
+import { Image } from "astro:assets";
+
+import logo from '../assets/logo-wonder-cloud.png';
 ---
 
-<nav class="flex items-center justify-between">
-  <div class="">
-    <img src="/src/assets/logo-wonder_clouds.svg" alt="">
+<nav class="flex items-center justify-between md:mx-24 lg:mx-[12rem]">
+  <div>
+    <Image src={logo} alt='' />
   </div>
 
   <ul class="hidden font-medium md:flex md:gap-9">

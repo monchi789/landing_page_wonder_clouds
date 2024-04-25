@@ -1,15 +1,19 @@
 ---
+import { Image } from 'astro:assets';
 
+import imageBanner from '../assets/banner 1.png';
 ---
 
-<div class="items-center mt-12 md:mt-24 md:flex">
+<div class="items-center mt-12 md:mt-10 md:flex md:mx-24 lg:mx-[12rem]">
   <div class="md:w-1/2">
     <h1 class="mb-5 text-4xl font-extrabold md:text-5xl">Es momento de que tu marca suba al siguiente nivel</h1>
-    <p>
+    <p class="mb-5">
       En Wonder Clouds nos encargamos de diseñar estrategias innovadoras para impulsar tu marca hacia nuevos horizontes y conectar con audiencias globales de manera impactante.
     </p>
+
+    <a href="#" class="bg-[#A5BDD9] px-4 py-2 rounded-2xl text-white font-semibold text-base">Contactanos</a>
   </div>
   <div class="md:w-1/2">
-    <img src="/src/assets/banner 1.svg" alt="Imagen Banner">
+    <Image src={imageBanner} alt="Imagen Banner" />
   </div>
 </div>

@@ -1,0 +1,36 @@
+---
+import CardWork from "./Card-Work.astro";
+
+
+---
+
+<div class="flex flex-col items-center gap-y-8 mb-12 mx-2 mt-12 md:mt-20 md:mx-24 lg:mx-[12rem]">
+  <div class="text-center md:container">
+    <h2 class="font-bold text-[2rem] mb-6 md:text-[2.5rem]">Nuestros Trabajos</h2>
+    <p class="">
+      En Wonder Clouds, cada proyecto es una obra maestra en la creación, donde
+      fusionamos creatividad y tecnología para dar vida a tu visión digital.
+    </p>
+  </div>
+
+  <div class="grid gap-y-3 md:gap-x-3 md:grid-cols-3 ">
+    <CardWork 
+      image="../assets/work1.png"
+      description="Trabajo de la empresa Peruvian Cusco Peru Travels"
+      title="Peruvian Cusco Travel"
+    />
+    <CardWork 
+      image="../assets/work2.png"
+      description="Trabajo de la empresa A.E.R Club"
+      title="A.E.R Club"
+    />
+    <CardWork 
+      image="../assets/work3.png"
+      description="Trabajo deProyecto Paltos"
+      title="Proyecto Paltos"
+    />
+  </div>
+  <div class="">
+    <a href="#" class=" bg-[#A5BDD9] px-10 py-2 rounded-2xl text-white font-semibold text-base">Ver Más</a>
+  </div>
+</div>

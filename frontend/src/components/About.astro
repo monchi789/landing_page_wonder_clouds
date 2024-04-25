@@ -1,0 +1,27 @@
+---
+import { Image } from "astro:assets";
+
+import aboutImage from '../assets/about.png'
+---
+
+<div class="flex flex-col-reverse  items-center md:flex-row md:mx-24 lg:mx-[12rem]">
+  <div class="md:w-1/2">
+    <Image src={aboutImage} alt='Imagen sobre Nosotros' />
+  </div>
+  <div class="md:w-1/2">
+    <h2 class="font-extrabold text-[2rem] mb-6 md:text-[2.5rem]">Sobre Nosotros</h2>
+    <p>
+      En Wonder Clouds, somos una empresa nueva y emocionante en el mundo del
+      marketing digital. Fundada en el corazón del encantador Cusco, nuestra
+      misión es dejar una marca única en la industria y ofrecer soluciones
+      digitales innovadoras que impulsen el éxito de nuestros clientes.
+      <br>
+      <br>
+      Con un equipo joven y dinámico, estamos llenos de entusiasmo y creatividad para
+      abordar los desafíos más grandes y llevar tus ideas a nuevas alturas en el
+      vasto cielo digital. A pesar de ser nuevos en el mercado, estamos listos
+      para hacer una diferencia significativa y convertirnos en líderes en el
+      campo del marketing digital en la región y más allá.
+    </p>
+  </div>
+</div>

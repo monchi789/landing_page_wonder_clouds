@@ -1,10 +1,16 @@
 from django.shortcuts import render
+from rest_framework import viewsets
 from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
-from .serializer import ClienteSerializer
-from .models import Cliente
+from .serializer import ClienteSerializer, ProyectosSerializer
+from .models import Cliente, Proyectos
 
 # Create your views here.
-class ListClientes(ListAPIView):
-    get_queryset = Cliente.objects.all()
+class ViewSetClientes(viewsets.ModelViewSet):
+    queryset = Cliente.objects.all()
     serializer_class = ClienteSerializer
+
+
+class ViewSetProyectos(viewsets.ModelViewSet):
+    queryset = Proyectos.objects.all()
+    serializer_class = ProyectosSerializer
