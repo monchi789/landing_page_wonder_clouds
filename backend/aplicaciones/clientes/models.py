@@ -10,9 +10,3 @@ class Cliente(models.Model):
     fecha_dominio = models.DateField()
     fecha_hosting = models.DateField()
     link_pagina_web = models.CharField(max_length=250, blank=False, null=False, default='')
-
-
-class Proyectos(models.Model):
-    titulo = models.CharField(max_length=50, blank=False, null=False, default='')
-    descripcion = models.CharField(max_length=250, blank=False, null=False, default='')
-    image = models.ImageField()
