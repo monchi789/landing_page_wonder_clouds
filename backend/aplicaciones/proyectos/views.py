@@ -7,7 +7,7 @@ from .serializer import ProyectosSerializer
 # Create your views here.
 class ProyectosViewSet(viewsets.ViewSet):
     """
-    A simple view for listing Proyects
+    Vista simple para listar proyectos.
     """
     def list(self, request):
         queryset = Proyectos.objects.all()
