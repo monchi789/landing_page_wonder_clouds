@@ -1,6 +1,9 @@
 ---
+import type { Trabajos } from "../interfaces/Trabajos";
 import CardWork from "./Card-Work.astro";
 
+const response = await fetch('http://127.0.0.1:8000/proyectos/proyectos/');
+const data: Trabajos[] = await response.json();
 
 ---
 
@@ -12,23 +15,14 @@ import CardWork from "./Card-Work.astro";
       fusionamos creatividad y tecnología para dar vida a tu visión digital.
     </p>
   </div>
-
   <div class="grid gap-y-3 md:gap-x-3 md:grid-cols-3 ">
-    <CardWork 
-      image="/src/assets/work1.png"
-      description="Trabajo de la empresa Peruvian Cusco Peru Travels"
-      title="Peruvian Cusco Travel"
-    />
-    <CardWork 
-      image="/src/assets/work2.png"
-      description="Trabajo de la empresa A.E.R Club"
-      title="A.E.R Club"
-    />
-    <CardWork 
-      image="/src/assets/work3.png"
-      description="Trabajo deProyecto Paltos"
-      title="Proyecto Paltos"
-    />
+    {data.map((data, index) => (
+      <CardWork
+        image={"http://127.0.0.1:8000/"+data.image}
+        description={data.descripcion}
+        title={data.titulo}
+      />
+    ))}
   </div>
   <div class="">
     <a href="#" class=" bg-[#A5BDD9] px-10 py-2 rounded-2xl text-white font-semibold text-base">Ver Más</a>
