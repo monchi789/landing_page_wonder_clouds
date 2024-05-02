@@ -7,13 +7,9 @@ const data: Trabajos[] = await response.json();
 
 ---
 
-<div class="flex flex-col items-center gap-y-8 mb-12 mx-2 mt-12 md:mt-20 md:mx-24 lg:mx-[12rem]">
+<div class="flex flex-col items-center gap-y-8 mb-12 mx-2 mt-6 md:mt-10 md:mx-24 lg:mx-[12rem]">
   <div class="text-center md:container">
     <h2 class="font-bold text-[2rem] mb-6 md:text-[2.5rem]">Nuestros Trabajos</h2>
-    <p class="">
-      En Wonder Clouds, cada proyecto es una obra maestra en la creación, donde
-      fusionamos creatividad y tecnología para dar vida a tu visión digital.
-    </p>
   </div>
   <div class="grid gap-y-3 md:gap-x-3 md:grid-cols-3 ">
     {data.map((data, index) => (
@@ -23,8 +19,5 @@ const data: Trabajos[] = await response.json();
         title={data.titulo}
       />
     ))}
-  </div>
-  <div class="">
-    <a href="/works" class=" bg-[#A5BDD9] px-10 py-2 rounded-2xl text-white font-semibold text-base">Ver Más</a>
   </div>
 </div>
