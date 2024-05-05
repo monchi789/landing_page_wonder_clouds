@@ -15,24 +15,33 @@ import PhoneIcon from "./icons/phoneIcon.astro";
       <Image src={imageContat} alt='Imagen para la parte de contactos' />
     </div>
     <div class="p-10 w-full md:w-2/3">
-      <form action="" class="flex flex-col gap-y-8">
+      <form action="https://api.web3forms.com/submit" class="flex flex-col gap-y-8" method="POST">
+
+        <!-- Replace with your Access Key -->
+        <input type="hidden" name="access_key" value="97779578-d5a1-4a83-af9c-b5e4d94406da">
+    
         <div class="flex">
           <UserIcon />
-          <input name="nombre_formulario" type="text" placeholder="Nombre" class="w-full md:w-2/3 text-gray-900 outline-none border-0 border-b-2">
+          <input name="Nombre" type="text" placeholder="Nombre" class="w-full md:w-2/3 text-gray-900 outline-none border-0 border-b-2" required>
         </div>
         <div class="flex">
           <EmailIcon />
-          <input name="nombre_formulario" type="email" placeholder="Correo" class="w-full md:w-2/3 text-gray-900 outline-none border-0 border-b-2">
+          <input name="Email" type="email" placeholder="Correo" class="w-full md:w-2/3 text-gray-900 outline-none border-0 border-b-2" required>
         </div>
         <div class="flex">
           <PhoneIcon />
-          <input name="nombre_formulario" type="text" placeholder="Telefono" class="w-full md:w-2/3 text-gray-900 outline-none border-0 border-b-2">
+          <input name="Telefono" type="text" placeholder="Telefono" class="w-full md:w-2/3 text-gray-900 outline-none border-0 border-b-2" required>
         </div>
+        <!-- hCaptcha Spam Protection -->
+        <div class="h-captcha" data-captcha="true"></div>
+        
         <div class="flex">
-          <input name="nombre_formulario" type="button" value="Enviar" class="w-full md:w-2/3 m-5 text-xl border-solid border-gray border-2 text-gray-400 px-2 py-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-[#A5BDD9] duration-200 hover:border-white hover:text-white cursor-pointer focus:outline-none focus:ring focus:ring-[#A5BDD9] ">
+          <button type="submit" class="w-full md:w-2/3 m-5 text-xl border-solid border-gray border-2 text-gray-400 px-2 py-2 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-[#A5BDD9] duration-200 hover:border-white hover:text-white cursor-pointer focus:outline-none focus:ring focus:ring-[#A5BDD9] ">Enviar</button>
         </div>
-      </form>
+    </form>
+    <!-- Required for hCaptcha -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+      
     </div>
   </div>
 </div>
-
