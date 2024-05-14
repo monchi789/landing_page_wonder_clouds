@@ -1,11 +1,14 @@
 #!/bin/sh
+set -e
 
-# Espera a que la base de datos esté disponible
-python3 manage.py wait_for_db
+# Espera a que la base de datos esté disponible en el puerto 5432
+until ncat -z -w 2 db 5432; do
+  echo "Esperando a que la base de datos esté disponible..."
+  sleep 2
+done
 
-# Realiza las migraciones
-python3 manage.py makemigrations
-python3 manage.py migrate
+# Ejecuta las migraciones de Django
+python manage.py migrate
 
-# Imprimo un mensaje
-echo "Servidor Levantado"
+# Inicia el servidor Django
+exec "$@"

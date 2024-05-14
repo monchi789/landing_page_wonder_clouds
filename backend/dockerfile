@@ -22,8 +22,8 @@ COPY ./entrypoint.sh /usr/src/app/entrypoint.sh
 # Give execution permission to the entrypoint script
 RUN chmod +x /usr/src/app/entrypoint.sh
 
-# Set the entrypoint script as the entry point for the container
-ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
+RUN python manage.py makemigrations
+RUN apk add --no-cache nmap-ncat
 
 # Run the application
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
