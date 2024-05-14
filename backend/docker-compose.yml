@@ -42,5 +42,4 @@ services:
 
 volumes:
     wonderclouds_db:
-        external: true
     pgadmin_sessions:
